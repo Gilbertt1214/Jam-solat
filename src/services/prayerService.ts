@@ -4,7 +4,7 @@ import { PrayerTime, PrayerSchedule, LocationData } from "../types/prayer";
 
 // Nama-nama waktu sholat dalam bahasa Indonesia
 const prayerNames = {
-    Imsak: " الإمساك", 
+    Imsak: " الإمساك",
     Fajr: " الفجر",
     Sunrise: " الشروق",
     Dhuhr: " الظهر",
@@ -12,8 +12,6 @@ const prayerNames = {
     Maghrib: "المغرب",
     Isha: " العشاء",
 };
-
-
 
 // Mendapatkan lokasi pengguna menggunakan API geolokasi browser
 export const getUserLocation = (): Promise<LocationData> => {

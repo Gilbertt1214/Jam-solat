@@ -41,7 +41,7 @@ const NextPrayer: React.FC<NextPrayerProps> = ({ nextPrayer }) => {
     };
 
     const playAdzanAudio = () => {
-        const audio = new Audio("src\assets\adzan.mp3"); // Ganti dengan path file adzan
+        const audio = new Audio("../assets/adzan.mp3"); // Ganti dengan path file adzan
         audio.play().catch((err) => console.error("Gagal memutar audio:", err));
     };
 
@@ -55,7 +55,7 @@ const NextPrayer: React.FC<NextPrayerProps> = ({ nextPrayer }) => {
         <div className="bg-gradient-to-r from-emerald-500 to-teal-500 dark:from-emerald-700 dark:to-teal-800 rounded-lg p-6 mb-6 text-white shadow-lg">
             <h2 className="text-xl font-semibold mb-2 flex items-center">
                 <Clock className="mr-2" size={20} />
-                Next 
+                Next
             </h2>
 
             <div className="flex justify-between items-center">

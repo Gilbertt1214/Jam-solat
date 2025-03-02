@@ -11,11 +11,14 @@ const Clock: React.FC = () => {
         return () => clearInterval(interval);
     }, []);
 
+    // Menambahkan offset waktu 7 jam
+    const adjustedTime = new Date(time.getTime() + 5.39 * 60 * 60 * 1000);
+
     return (
         <div className="flex flex-col items-start w-full max-w-md mx-auto">
             <h2 className="text-xl font-semibold mb-2">Ramadhan Kareem</h2>
             <div className="text-lg font-mono font-bold flex gap-1">
-                {time
+                {adjustedTime
                     .toLocaleTimeString("id-ID", { hour12: false })
                     .split("")
                     .map((char, index) => (
