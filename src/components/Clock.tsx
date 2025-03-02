@@ -16,8 +16,8 @@ const Clock: React.FC = () => {
 
     return (
         <div className="flex flex-col items-start w-full max-w-md mx-auto">
-            <h2 className="text-xl font-semibold mb-2">Ramadhan Kareem</h2>
-            <div className="text-lg font-mono font-bold flex gap-1">
+            <h2 className="text-3xl font-semibold mb-2">Ramadhan Kareem</h2>
+            <div className="text-3xl font-mono font-bold flex gap-1">
                 {adjustedTime
                     .toLocaleTimeString("id-ID", { hour12: false })
                     .split("")
