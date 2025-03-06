@@ -6,13 +6,6 @@ interface LocationSelectorProps {
 }
 
 const popularLocations = [
-  // Middle East
-  { city: 'Mecca', country: 'Saudi Arabia', lat: 21.4225, lng: 39.8262 },
-  { city: 'Medina', country: 'Saudi Arabia', lat: 24.5247, lng: 39.5692 },
-  { city: 'Jerusalem', country: 'Palestine', lat: 31.7683, lng: 35.2137 },
-  { city: 'Cairo', country: 'Egypt', lat: 30.0444, lng: 31.2357 },
-  { city: 'Istanbul', country: 'Turkey', lat: 41.0082, lng: 28.9784 },
-  { city: 'Dubai', country: 'UAE', lat: 25.2048, lng: 55.2708 },
   
   // Indonesia - Major Cities
   { city: 'Jakarta', country: 'Indonesia', lat: -6.2088, lng: 106.8456 },
@@ -28,6 +21,16 @@ const popularLocations = [
   { city: 'Semarang', country: 'Indonesia', lat: -6.9932, lng: 110.4203 },
   { city: 'Depok', country: 'Indonesia', lat: -6.4025, lng: 106.7942 },
   { city: 'Tangerang', country: 'Indonesia', lat: -6.1781, lng: 106.6300 },
+  { city: 'Serang', country: 'Indonesia', lat: -6.1200, lng: 106.1503 },
+{ city: 'Cilegon', country: 'Indonesia', lat: -6.0023, lng: 106.0166 },
+{ city: 'Tangerang Selatan', country: 'Indonesia', lat: -6.2886, lng: 106.7179 },
+{ city: 'Lebak', country: 'Indonesia', lat: -6.5644, lng: 106.2522 },
+{ city: 'Pandeglang', country: 'Indonesia', lat: -6.3086, lng: 106.1061 },
+{ city: 'Serang', country: 'Indonesia', lat: -6.1200, lng: 106.1503 },
+{ city: 'Cilegon', country: 'Indonesia', lat: -6.0023, lng: 106.0166 },
+{ city: 'Tangerang Selatan', country: 'Indonesia', lat: -6.2886, lng: 106.7179 },
+{ city: 'Lebak', country: 'Indonesia', lat: -6.5644, lng: 106.2522 },
+{ city: 'Pandeglang', country: 'Indonesia', lat: -6.3086, lng: 106.1061 },
   { city: 'Bekasi', country: 'Indonesia', lat: -6.2349, lng: 106.9896 },
   { city: 'Padang', country: 'Indonesia', lat: -0.9471, lng: 100.4172 },
   { city: 'Malang', country: 'Indonesia', lat: -7.9797, lng: 112.6304 },
@@ -62,8 +65,6 @@ const LocationSelector: React.FC<LocationSelectorProps> = ({ onLocationSelect })
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
   
   const regions = [
-    { name: 'All', count: popularLocations.length },
-    { name: 'Middle East', count: popularLocations.filter(loc => ['Saudi Arabia', 'Palestine', 'Egypt', 'Turkey', 'UAE'].includes(loc.country)).length },
     { name: 'Indonesia', count: popularLocations.filter(loc => loc.country === 'Indonesia').length },
   ];
   
@@ -75,8 +76,6 @@ const LocationSelector: React.FC<LocationSelectorProps> = ({ onLocationSelect })
     
     // Filter by region
     const matchesRegion = selectedRegion === null || 
-      selectedRegion === 'All' || 
-      (selectedRegion === 'Middle East' && ['Saudi Arabia', 'Palestine', 'Egypt', 'Turkey', 'UAE'].includes(loc.country)) ||
       (selectedRegion === 'Indonesia' && loc.country === 'Indonesia');
     
     return matchesSearch && matchesRegion;

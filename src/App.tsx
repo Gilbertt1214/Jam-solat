@@ -159,6 +159,22 @@ function App() {
             let longitude = 39.8262;
 
             // Indonesian cities
+            if (city === "Serang") {
+                latitude = -6.12;
+                longitude = 106.1503;
+            } else if (city === "Cilegon") {
+                latitude = -6.0023;
+                longitude = 106.0166;
+            } else if (city === "Tangerang Selatan") {
+                latitude = -6.2886;
+                longitude = 106.7179;
+            } else if (city === "Lebak") {
+                latitude = -6.5644;
+                longitude = 106.2522;
+            } else if (city === "Pandeglang") {
+                latitude = -6.3086;
+                longitude = 106.1061;
+            }
             if (city === "Jakarta") {
                 latitude = -6.2088;
                 longitude = 106.8456;
@@ -192,7 +208,7 @@ function App() {
             } else if (city === "Tangerang") {
                 latitude = -6.1781;
                 longitude = 106.63;
-            } else if (city === "Bekasi") {
+            }else if (city === "Bekasi") {
                 latitude = -6.2349;
                 longitude = 106.9896;
             } else if (city === "Padang") {
@@ -274,26 +290,7 @@ function App() {
                 latitude = -6.5971;
                 longitude = 106.806;
             }
-            // Middle East cities
-            else if (city === "Mecca") {
-                latitude = 21.4225;
-                longitude = 39.8262;
-            } else if (city === "Medina") {
-                latitude = 24.5247;
-                longitude = 39.5692;
-            } else if (city === "Jerusalem") {
-                latitude = 31.7683;
-                longitude = 35.2137;
-            } else if (city === "Cairo") {
-                latitude = 30.0444;
-                longitude = 31.2357;
-            } else if (city === "Istanbul") {
-                latitude = 41.0082;
-                longitude = 28.9784;
-            } else if (city === "Dubai") {
-                latitude = 25.2048;
-                longitude = 55.2708;
-            }
+            
 
             const selectedLocation = {
                 city,

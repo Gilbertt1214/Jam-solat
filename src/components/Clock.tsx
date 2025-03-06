@@ -12,7 +12,7 @@ const Clock: React.FC = () => {
     }, []);
 
     // Menambahkan offset waktu 7 jam
-    const adjustedTime = new Date(time.getTime() + 5.39 * 60 * 60 * 1000);
+    const adjustedTime = new Date(time.getTime());
 
     return (
         <div className="flex flex-col items-start w-full max-w-md mx-auto">
